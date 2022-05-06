@@ -1,0 +1,20 @@
+.sign {
+  display: flex;
+  flex-direction: column;
+  vertical-align: center;
+  width: 20px;
+  text-align: center;
+
+  &__question {
+    border-bottom: 1px solid red;
+  }
+
+  &__answer {
+
+  }
+
+  &__input {
+    min-width: 10px;
+    max-width: 20px;
+  }
+}
