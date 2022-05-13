@@ -1,12 +1,12 @@
 import React, { ChangeEvent, useState } from 'react';
-import { Alphabet } from '../utilities/types';
+import { Alphabet } from '../../utilities/types';
 import './Sign.scss';
 
 interface Props extends Alphabet {
   omit: boolean;
 }
 
-export const Sign = ({ sign, spelling, pronunciation, omit }: Props) => {
+export const Sign = ({ sign, pronunciation, omit }: Props) => {
   const [answer, setAnswer] = useState<string>('');
   const inputHandler = (e: ChangeEvent<HTMLInputElement>) => {
     setAnswer(e.target.value);

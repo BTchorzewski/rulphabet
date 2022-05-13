@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.scss';
-import { Sign } from './component/Sign';
+import { Sign } from './component/Game/Sign';
 import { alphabet } from './utilities/alphabet';
 import { song } from './utilities/song-text';
 
 function App() {
-  console.log(song.split(''))
-  const [text, setText] = useState<string>(song)
   return (
     <div className="App">
       <div className="App__display">
@@ -20,6 +18,7 @@ function App() {
           })
         }
       </div>
+
     </div>
   );
 }
