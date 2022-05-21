@@ -11,11 +11,11 @@ body *:after {
   background-color: aquamarine;
   height: 100vh;
   padding: 50px;
-
+  display: flex;
   &__display {
 
     display: flex;
-    width: 100%;
+    max-width: 50%;
   }
 }
 
