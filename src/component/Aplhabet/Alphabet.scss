@@ -1,0 +1,22 @@
+.Alphabet {
+  width: 45%;
+  display: grid;
+  grid-template-rows:    repeat(8, 30px);
+  grid-template-columns: repeat(8, 1fr);
+
+
+  &__item {
+    display: flex;
+
+    * {
+      padding: 10px;
+    }
+  }
+
+  &__origin {
+    font-weight: bolder;
+  }
+  &__pronunciation {
+
+  }
+}
