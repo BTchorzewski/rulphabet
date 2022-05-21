@@ -1,5 +1,5 @@
 import React, { ChangeEvent, useState } from 'react';
-import { Alphabet } from '../utilities/types';
+import { Alphabet } from '../../utilities/types';
 import './Sign.scss';
 
 interface Props extends Alphabet {
@@ -14,7 +14,6 @@ export const Sign = ({ sign, spelling, pronunciation, omit }: Props) => {
 
   return (
     <div
-      style={{ borderTop: '1px solid green' }}
       className="sign">
       <p className="sign__question">{sign}</p>
       {
