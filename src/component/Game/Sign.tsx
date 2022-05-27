@@ -1,6 +1,7 @@
-import React, { ChangeEvent, useState } from 'react';
+import React, { ChangeEvent, useContext, useState } from 'react';
 import { Alphabet } from '../../utilities/types';
 import './Sign.scss';
+import { SignContext } from '../../context/sign-context';
 
 interface Props extends Alphabet {
   omit: boolean;
@@ -11,7 +12,7 @@ export const Sign = ({ sign, spelling, pronunciation, omit }: Props) => {
   const inputHandler = (e: ChangeEvent<HTMLInputElement>) => {
     setAnswer(e.target.value);
   };
-
+  const {setGlobalSign} = useContext(SignContext)
   return (
     <div
       className="sign">
@@ -25,6 +26,10 @@ export const Sign = ({ sign, spelling, pronunciation, omit }: Props) => {
             value={answer}
             className="sign__input"
             onChange={inputHandler}
+            onFocus={(e)=>{
+              setGlobalSign(sign);
+            }
+            }
           />
       }
     </div>
