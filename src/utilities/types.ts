@@ -6,6 +6,6 @@ export interface Alphabet {
   pronunciation: string
 }
 
-export interface Sign extends Omit<Alphabet, 'spelling' | 'pronunciation'> {
+export interface Question extends Omit<Alphabet, 'spelling' | 'pronunciation'> {
   answer: string;
 }
