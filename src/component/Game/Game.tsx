@@ -2,16 +2,17 @@ import React, { useContext } from "react";
 import './Game.scss';
 import { alphabet } from "../../utilities/alphabet";
 import { Sign } from "./Sign/Sign";
-import { FocuseContext } from '../../context/focuse-context';
 import { GameContext } from '../../context/game-context';
+import { Question } from '../../utilities/types';
 
 export const Game = () => {
-  const { focusedInputPosition } = useContext(FocuseContext);
+  // @todo remove gameContext idea.
   const { game } = useContext(GameContext)
-  console.log({ game })
+
   return <div className='Game'>
     {
-      game.map((item, i) => {
+      game.map((item: Question, i) => {
+        // ts-ignore
         const foundSign = alphabet.filter(sign => sign.sign === item.sign);
         if (foundSign.length < 1) return <Sign positionInList={i} key={i} sign={item.sign} omit={true}
                                                spelling={item.sign} pronunciation={item.sign}/>;

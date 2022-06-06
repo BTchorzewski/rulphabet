@@ -1,6 +1,6 @@
 import { ChangeEvent } from 'react';
 
-export const focusNext = (e: ChangeEvent<HTMLInputElement>, pronunciation: string, positionInList: number, inc: number): any => {
+export const focusNextInput = (e: ChangeEvent<HTMLInputElement>, pronunciation: string, positionInList: number, inc: number): any => {
   if (inc === 4) return null;
 
   if (e.target.value === pronunciation) {
@@ -11,7 +11,7 @@ export const focusNext = (e: ChangeEvent<HTMLInputElement>, pronunciation: strin
       nextSibling.focus()
     }
     if (nextSibling === null) {
-      return focusNext(e, pronunciation, positionInList, ++inc)
+      return focusNextInput(e, pronunciation, positionInList, ++inc)
     }
   }
 }

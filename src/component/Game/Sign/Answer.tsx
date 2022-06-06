@@ -1,19 +1,13 @@
-import React, { useContext, useEffect } from 'react';
-import { FocuseContext } from '../../../context/focuse-context';
+import React from 'react';
 
 interface Props {
   omit: boolean;
   answer: string;
   sign: string;
-  positionInList: number;
 }
 
-export const Answer = ({ sign, answer, omit, positionInList }: Props) => {
-  const { focusedInputPosition, setFocusedInputPosition } = useContext(FocuseContext)
-  useEffect(() => {
+export const Answer = ({ sign, answer, omit }: Props) => {
 
-    setFocusedInputPosition(positionInList++)
-  }, [])
   return (
     <p>
       {

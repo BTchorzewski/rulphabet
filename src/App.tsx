@@ -6,13 +6,13 @@ import { SignContext } from './context/sign-context';
 import { FocuseContext } from './context/focuse-context';
 import { songState } from './utilities/song-text';
 import { GameContext } from './context/game-context';
-import { Sign } from './utilities/types';
+import { Question } from './utilities/types';
 
 function App() {
 
   const [globalSign, setGlobalSign] = useState('')
   const [focusedInputPosition, setFocusedInputPosition] = useState(0);
-  const [game, setGame] = useState<Sign[]>(songState)
+  const [game, setGame] = useState<Question[]>(songState)
 
   return (
     <div className="App">
