@@ -1,6 +1,11 @@
 .Game {
-  width: 50%;
+  width: 55%;
   display: flex;
   flex-wrap: wrap;
   word-wrap: break-word;
+  background-color: #c4c4c4;
+  border-radius: 5px;
+  padding: 10px;
+  margin-right: 15px;
+  overflow: paged-y;
 }

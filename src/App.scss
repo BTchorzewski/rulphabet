@@ -8,10 +8,11 @@ body *:after {
 }
 
 .App {
-  background-color: aquamarine;
+  background-color: #faf9f9;
   height: 100vh;
   padding: 50px;
   display: flex;
+
   &__display {
 
     display: flex;

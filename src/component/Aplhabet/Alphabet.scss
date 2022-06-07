@@ -3,18 +3,20 @@
   display: grid;
   grid-template-rows:    repeat(8, 30px);
   grid-template-columns: repeat(8, 1fr);
-  height: 35px;
-
+  max-height: 350px;
+  padding: 20px;
+  background-color: #bee3db;
+  border-radius: 5px;
 
   &__item {
     display: flex;
 
     * {
-      padding: 10px;
+      padding: 10px 5px;
     }
 
     &--focus {
-      background-color: red;
+      background-color: #89b0ae;
       border-radius: 8%;
     }
   }
